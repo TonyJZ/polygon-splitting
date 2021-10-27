@@ -1,0 +1,43 @@
+{
+  "name": "@renoworks/polygon-splitting",
+  "version": "1.0.0",
+  "description": "Jing Zhang <jing.zhang@renoworks.com>",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "dev": "webpack server --hot --config webpack.dev.js",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "prepublish": "$npm_execpath run build",
+    "test": "set TS_NODE_COMPILER_OPTIONS={\"module\": \"commonjs\" } && mocha -r ts-node/register 'tests/*.ts'",
+    "autotest": "find src tests | entr $npm_execpath test"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.22",
+    "@types/gl-matrix": "^3.2.0",
+    "@types/mocha": "^9.0.0",
+    "@types/three": "^0.133.1",
+    "chai": "^4.3.4",
+    "esbuild-loader": "^2.16.0",
+    "fork-ts-checker-notifier-webpack-plugin": "^4.0.0",
+    "fork-ts-checker-webpack-plugin": "^6.4.0",
+    "html-webpack-plugin": "^5.4.0",
+    "mocha": "^9.1.3",
+    "three": "^0.133.1",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "@types/long": "^4.0.1",
+    "gl-matrix": "^3.4.3",
+    "lazy-get-decorator": "^2.2.0"
+  }
+}
