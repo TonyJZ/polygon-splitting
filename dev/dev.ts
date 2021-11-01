@@ -107,6 +107,7 @@ function createPolygon(p: sp.Polygon, offset: vec3, color: number): THREE.Line {
     colors.push(cl.r, cl.g, cl.b);
   }
   positions.push(verts[0][0], verts[0][1], verts[0][2]);
+  colors.push(cl.r, cl.g, cl.b);
 
   const geo = new THREE.BufferGeometry();
   geo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
