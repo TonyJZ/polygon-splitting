@@ -49,9 +49,9 @@ function app() {
     renderer.render(scene, camera);
   }
 
-  const pts = asVec3(polys[1]);
+  const pts = asVec3(polys[4]);
   const poly = new sp.Polygon(pts);
-  const cutPlane = new sp.Plane(vec3.fromValues(0, 1, 0), -1.5);
+  const cutPlane = new sp.Plane(vec3.fromValues(0, 1, 0), -3.0);
   const orgOffset = vec3.fromValues(-5, 0, 0);
   const aboveOffset = vec3.fromValues(-5, 0.25, -2);
   const belowOffset = vec3.fromValues(-5, -0.25, -2);
